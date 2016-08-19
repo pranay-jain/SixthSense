@@ -9,17 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let singleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleSingleTap))
+        singleTapRecognizer.numberOfTapsRequired = 1
+        view.addGestureRecognizer(singleTapRecognizer)
+        
+        
+        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleDoubleTap))
+        doubleTapRecognizer.numberOfTapsRequired = 2
+        view.addGestureRecognizer(doubleTapRecognizer)
+        
+        singleTapRecognizer.requireGestureRecognizerToFail(doubleTapRecognizer)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func handleSingleTap() {
+        print("Single")
     }
-
-
+    
+    func handleDoubleTap() {
+        print("Double")
+    }
+    
 }
 

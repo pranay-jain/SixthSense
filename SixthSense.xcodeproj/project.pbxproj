@@ -14,6 +14,7 @@
 		9BFCA32B1D677D3A006D6506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFCA3291D677D3A006D6506 /* LaunchScreen.storyboard */; };
 		9BFCA3361D677D3A006D6506 /* SixthSenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCA3351D677D3A006D6506 /* SixthSenseTests.swift */; };
 		9BFCA3411D677D3A006D6506 /* SixthSenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCA3401D677D3A006D6506 /* SixthSenseUITests.swift */; };
+		9BFCA3501D678B70006D6506 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCA34F1D678B70006D6506 /* SpeechRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9BFCA33C1D677D3A006D6506 /* SixthSenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SixthSenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFCA3401D677D3A006D6506 /* SixthSenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthSenseUITests.swift; sourceTree = "<group>"; };
 		9BFCA3421D677D3A006D6506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BFCA34F1D678B70006D6506 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		9BFCA31F1D677D3A006D6506 /* SixthSense */ = {
 			isa = PBXGroup;
 			children = (
-				9BFCA3201D677D3A006D6506 /* AppDelegate.swift */,
 				9BFCA3221D677D3A006D6506 /* ViewController.swift */,
+				9BFCA34F1D678B70006D6506 /* SpeechRecognizer.swift */,
 				9BFCA3241D677D3A006D6506 /* Main.storyboard */,
-				9BFCA3271D677D3A006D6506 /* Assets.xcassets */,
-				9BFCA3291D677D3A006D6506 /* LaunchScreen.storyboard */,
-				9BFCA32C1D677D3A006D6506 /* Info.plist */,
+				9BFCA34E1D6783E5006D6506 /* Supporting Files */,
 			);
 			path = SixthSense;
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				9BFCA3421D677D3A006D6506 /* Info.plist */,
 			);
 			path = SixthSenseUITests;
+			sourceTree = "<group>";
+		};
+		9BFCA34E1D6783E5006D6506 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BFCA3201D677D3A006D6506 /* AppDelegate.swift */,
+				9BFCA3271D677D3A006D6506 /* Assets.xcassets */,
+				9BFCA3291D677D3A006D6506 /* LaunchScreen.storyboard */,
+				9BFCA32C1D677D3A006D6506 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				9BFCA3231D677D3A006D6506 /* ViewController.swift in Sources */,
 				9BFCA3211D677D3A006D6506 /* AppDelegate.swift in Sources */,
+				9BFCA3501D678B70006D6506 /* SpeechRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
