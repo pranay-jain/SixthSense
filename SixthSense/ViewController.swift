@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 import DKCamera
+import AlamofireImage
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -38,12 +40,24 @@ class ViewController: UIViewController {
     func handleSingleTap() {
         print("Single")
         let camera = DKCamera()
+        camera.didCancel = { () in
+            print("didCancel")
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
         camera.didFinishCapturingImage = {(image: UIImage) in
+            sendRequest(image)
             self.imageView.image = image
             
             self.dismissViewControllerAnimated(true, completion: nil)
         }
         self.presentViewController(camera, animated: true, completion: nil)
+    }
+    
+    func sendRequest(image: UIImage) {
+        let urlPath = ""
+        //Alamofire.upload(.POST, urlPath, )
     }
     
     func handleSwipeRight() {
