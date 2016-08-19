@@ -3,7 +3,7 @@ var Clarifai = require('clarifai');
 var keywords = ['laptop',
 				'computer',
 				'people',
-				'no person',
+				//'no person',
 				'table',
 				'coffee',
 				'paper',
@@ -40,28 +40,51 @@ var keywords = ['laptop',
 				'girl',
 				'boy',
 				'flower',
-				'adult'
+				'adult',
+				'pen',
+				'phone',
+				'mobile',
+				'crayon',
+				'pencil',
+				'sharp'
 			   ];
 
-var identified = [];
-
+var words = [];
+var sentence = "Objects around you are : ";
 var klen = keywords.length;
 
 function search(response){
 	var len = response.results[0]["result"]["tag"]["classes"].length;
     for(i=0;i<len;i++)
     {
+    	word = response.results[0]["result"]["tag"]["classes"][i];
     	for(j=0;j<klen;j++)
     	{
-    		if(response.results[0]["result"]["tag"]["classes"][i] == keywords[j])
+    		if(word == keywords[j])
     		{
-    			identified.push(response.results[0]["result"]["tag"]["classes"][i]);
+    			if(word=='sharp')
+    				words.push('a sharp object please be careful');
+    			else
+    				words.push(response.results[0]["result"]["tag"]["classes"][i]);	
+    			
     			break;
     		}
     	}
     }
+}
 
-    console.log(identified);
+function concat(words){
+	for(i=0;i<words.length-1;i++)
+	{
+		sentence = sentence + words[i] + ", ";
+	}
+
+	sentence = sentence + words[words.length-1] + ".";
+	return sentence;
+}
+
+function displayall(response){
+	console.log(response.results[0]["result"]["tag"]["classes"]);
 }
 
 Clarifai.initialize({
@@ -70,10 +93,12 @@ Clarifai.initialize({
 });
 
 Clarifai.getTagsByUrl(
-  'https://scontent.fdel1-1.fna.fbcdn.net/v/t35.0-12/14074409_10209730035548763_1779764836_o.jpg?oh=719ccdd2c9adeccbb881a72fb0033905&oe=57B90C68'
+  'http://www.creativeboom.com/uploads/articles/23/23148daab9620ec0fcbfb96893653a1335525fcc_860.jpg'
 ).then(
    function(response) {
     search(response);
+    console.log(concat(words));
+    //displayall(response);
   },
   function(err){
     console.log(err);
