@@ -1,0 +1,9 @@
+{
+  "name": "SixthSense",
+  "version": "0.0.0",
+  "private": true
+  ,
+  "dependencies": {
+    "clarifai": "^0.1.0"
+  }
+}
