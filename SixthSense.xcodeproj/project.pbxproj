@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99FE7E92B65ECA29888B2793 /* Pods_SixthSense.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8378F908ACC0444BC4DDCF29 /* Pods_SixthSense.framework */; };
 		9BFCA3211D677D3A006D6506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCA3201D677D3A006D6506 /* AppDelegate.swift */; };
 		9BFCA3231D677D3A006D6506 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCA3221D677D3A006D6506 /* ViewController.swift */; };
 		9BFCA3261D677D3A006D6506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFCA3241D677D3A006D6506 /* Main.storyboard */; };
@@ -15,6 +16,11 @@
 		9BFCA3361D677D3A006D6506 /* SixthSenseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCA3351D677D3A006D6506 /* SixthSenseTests.swift */; };
 		9BFCA3411D677D3A006D6506 /* SixthSenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCA3401D677D3A006D6506 /* SixthSenseUITests.swift */; };
 		9BFCA3501D678B70006D6506 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCA34F1D678B70006D6506 /* SpeechRecognizer.swift */; };
+		9BFCA3551D678D65006D6506 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BFCA3521D678D65006D6506 /* AcousticModelEnglish.bundle */; };
+		9BFCA3561D678D65006D6506 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA3531D678D65006D6506 /* OpenEars.framework */; };
+		9BFCA3571D678D65006D6506 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA3541D678D65006D6506 /* Slt.framework */; };
+		AF332DD47F8629FD90777835 /* Pods_SixthSenseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4AA28FF08C9084BF8F163E /* Pods_SixthSenseUITests.framework */; };
+		FA0EBE2F862378F6BAF3F766 /* Pods_SixthSenseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE89F85D140A693711DAB7C /* Pods_SixthSenseTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		224808C65C21CE2F1F6F97C0 /* Pods-SixthSenseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixthSenseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SixthSenseTests/Pods-SixthSenseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		248499FB8AAB7AE3019DD733 /* Pods-SixthSenseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixthSenseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SixthSenseUITests/Pods-SixthSenseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F2CA55A280A28C42904EEF7 /* Pods-SixthSense.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixthSense.release.xcconfig"; path = "Pods/Target Support Files/Pods-SixthSense/Pods-SixthSense.release.xcconfig"; sourceTree = "<group>"; };
+		8378F908ACC0444BC4DDCF29 /* Pods_SixthSense.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SixthSense.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B4622BC8B40761F1FA9DDB4 /* Pods-SixthSense.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixthSense.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SixthSense/Pods-SixthSense.debug.xcconfig"; sourceTree = "<group>"; };
 		9BFCA31D1D677D3A006D6506 /* SixthSense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixthSense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFCA3201D677D3A006D6506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFCA3221D677D3A006D6506 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +60,13 @@
 		9BFCA3401D677D3A006D6506 /* SixthSenseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthSenseUITests.swift; sourceTree = "<group>"; };
 		9BFCA3421D677D3A006D6506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BFCA34F1D678B70006D6506 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		9BFCA3521D678D65006D6506 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		9BFCA3531D678D65006D6506 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		9BFCA3541D678D65006D6506 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		C12130FCC2B1FEC5C17AB0B1 /* Pods-SixthSenseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixthSenseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SixthSenseTests/Pods-SixthSenseTests.release.xcconfig"; sourceTree = "<group>"; };
+		D32B5B2E2A9B942491066B67 /* Pods-SixthSenseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SixthSenseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SixthSenseUITests/Pods-SixthSenseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EF4AA28FF08C9084BF8F163E /* Pods_SixthSenseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SixthSenseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE89F85D140A693711DAB7C /* Pods_SixthSenseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SixthSenseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFCA3571D678D65006D6506 /* Slt.framework in Frameworks */,
+				9BFCA3561D678D65006D6506 /* OpenEars.framework in Frameworks */,
+				99FE7E92B65ECA29888B2793 /* Pods_SixthSense.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0EBE2F862378F6BAF3F766 /* Pods_SixthSenseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF332DD47F8629FD90777835 /* Pods_SixthSenseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +106,8 @@
 				9BFCA3341D677D3A006D6506 /* SixthSenseTests */,
 				9BFCA33F1D677D3A006D6506 /* SixthSenseUITests */,
 				9BFCA31E1D677D3A006D6506 /* Products */,
+				D8D9F9F0B4C137F94833FF22 /* Pods */,
+				A4B190E97DC54EDA1EA923A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +127,7 @@
 				9BFCA3221D677D3A006D6506 /* ViewController.swift */,
 				9BFCA34F1D678B70006D6506 /* SpeechRecognizer.swift */,
 				9BFCA3241D677D3A006D6506 /* Main.storyboard */,
+				9BFCA3511D678D65006D6506 /* Framework */,
 				9BFCA34E1D6783E5006D6506 /* Supporting Files */,
 			);
 			path = SixthSense;
@@ -136,6 +162,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9BFCA3511D678D65006D6506 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				9BFCA3521D678D65006D6506 /* AcousticModelEnglish.bundle */,
+				9BFCA3531D678D65006D6506 /* OpenEars.framework */,
+				9BFCA3541D678D65006D6506 /* Slt.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		A4B190E97DC54EDA1EA923A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8378F908ACC0444BC4DDCF29 /* Pods_SixthSense.framework */,
+				EFE89F85D140A693711DAB7C /* Pods_SixthSenseTests.framework */,
+				EF4AA28FF08C9084BF8F163E /* Pods_SixthSenseUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8D9F9F0B4C137F94833FF22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B4622BC8B40761F1FA9DDB4 /* Pods-SixthSense.debug.xcconfig */,
+				6F2CA55A280A28C42904EEF7 /* Pods-SixthSense.release.xcconfig */,
+				224808C65C21CE2F1F6F97C0 /* Pods-SixthSenseTests.debug.xcconfig */,
+				C12130FCC2B1FEC5C17AB0B1 /* Pods-SixthSenseTests.release.xcconfig */,
+				248499FB8AAB7AE3019DD733 /* Pods-SixthSenseUITests.debug.xcconfig */,
+				D32B5B2E2A9B942491066B67 /* Pods-SixthSenseUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BFCA3451D677D3A006D6506 /* Build configuration list for PBXNativeTarget "SixthSense" */;
 			buildPhases = (
+				09AF98DD9BED5E205F4BCA5D /* [CP] Check Pods Manifest.lock */,
 				9BFCA3191D677D3A006D6506 /* Sources */,
 				9BFCA31A1D677D3A006D6506 /* Frameworks */,
 				9BFCA31B1D677D3A006D6506 /* Resources */,
+				D74032DA5773152FE14423C3 /* [CP] Embed Pods Frameworks */,
+				8BCB1B4B1CE281BA0534EC16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BFCA3481D677D3A006D6506 /* Build configuration list for PBXNativeTarget "SixthSenseTests" */;
 			buildPhases = (
+				2533F8969565B0852A5C5A6E /* [CP] Check Pods Manifest.lock */,
 				9BFCA32D1D677D3A006D6506 /* Sources */,
 				9BFCA32E1D677D3A006D6506 /* Frameworks */,
 				9BFCA32F1D677D3A006D6506 /* Resources */,
+				438FB84315CE3A2400C644F3 /* [CP] Embed Pods Frameworks */,
+				4D861FF19FB838563093A188 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BFCA34B1D677D3A006D6506 /* Build configuration list for PBXNativeTarget "SixthSenseUITests" */;
 			buildPhases = (
+				9FF9D6F0347D769255A67BF6 /* [CP] Check Pods Manifest.lock */,
 				9BFCA3381D677D3A006D6506 /* Sources */,
 				9BFCA3391D677D3A006D6506 /* Frameworks */,
 				9BFCA33A1D677D3A006D6506 /* Resources */,
+				25A623C016F226B93FF4DF11 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFCA32B1D677D3A006D6506 /* LaunchScreen.storyboard in Resources */,
+				9BFCA3551D678D65006D6506 /* AcousticModelEnglish.bundle in Resources */,
 				9BFCA3281D677D3A006D6506 /* Assets.xcassets in Resources */,
 				9BFCA3261D677D3A006D6506 /* Main.storyboard in Resources */,
 			);
@@ -261,6 +329,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09AF98DD9BED5E205F4BCA5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2533F8969565B0852A5C5A6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		25A623C016F226B93FF4DF11 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SixthSenseUITests/Pods-SixthSenseUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		438FB84315CE3A2400C644F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SixthSenseTests/Pods-SixthSenseTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D861FF19FB838563093A188 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SixthSenseTests/Pods-SixthSenseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BCB1B4B1CE281BA0534EC16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SixthSense/Pods-SixthSense-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FF9D6F0347D769255A67BF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D74032DA5773152FE14423C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SixthSense/Pods-SixthSense-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9BFCA3191D677D3A006D6506 /* Sources */ = {
@@ -411,8 +602,13 @@
 		};
 		9BFCA3461D677D3A006D6506 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B4622BC8B40761F1FA9DDB4 /* Pods-SixthSense.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SixthSense/Framework",
+				);
 				INFOPLIST_FILE = SixthSense/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HackIIIT.SixthSense;
@@ -422,8 +618,13 @@
 		};
 		9BFCA3471D677D3A006D6506 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F2CA55A280A28C42904EEF7 /* Pods-SixthSense.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SixthSense/Framework",
+				);
 				INFOPLIST_FILE = SixthSense/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HackIIIT.SixthSense;
@@ -433,6 +634,7 @@
 		};
 		9BFCA3491D677D3A006D6506 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 224808C65C21CE2F1F6F97C0 /* Pods-SixthSenseTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SixthSenseTests/Info.plist;
@@ -445,6 +647,7 @@
 		};
 		9BFCA34A1D677D3A006D6506 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C12130FCC2B1FEC5C17AB0B1 /* Pods-SixthSenseTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SixthSenseTests/Info.plist;
@@ -457,6 +660,7 @@
 		};
 		9BFCA34C1D677D3A006D6506 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 248499FB8AAB7AE3019DD733 /* Pods-SixthSenseUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SixthSenseUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -468,6 +672,7 @@
 		};
 		9BFCA34D1D677D3A006D6506 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D32B5B2E2A9B942491066B67 /* Pods-SixthSenseUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SixthSenseUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -496,6 +701,7 @@
 				9BFCA3471D677D3A006D6506 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BFCA3481D677D3A006D6506 /* Build configuration list for PBXNativeTarget "SixthSenseTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +710,7 @@
 				9BFCA34A1D677D3A006D6506 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BFCA34B1D677D3A006D6506 /* Build configuration list for PBXNativeTarget "SixthSenseUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +719,7 @@
 				9BFCA34D1D677D3A006D6506 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

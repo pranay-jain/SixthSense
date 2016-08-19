@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import AVFoundation
+import AudioToolbox
 
 class SpeechRecognizer {
-    let recognizer = SFSpeechRecognizer
+    
 }
 
 
