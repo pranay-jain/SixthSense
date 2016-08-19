@@ -1,5 +1,7 @@
+//Abhinav Thukral
+//8/20/2016
+//SixthSense photo analysis API response
 var Clarifai = require('clarifai');
-
 var keywords = ['laptop',
 				'computer',
 				'people',
@@ -53,7 +55,8 @@ var words = [];
 var sentence = "Objects around you are : ";
 var klen = keywords.length;
 
-function search(response){
+//Filter response by keywords
+function filter(response){
 	var len = response.results[0]["result"]["tag"]["classes"].length;
     for(i=0;i<len;i++)
     {
@@ -73,6 +76,7 @@ function search(response){
     }
 }
 
+//Create a sentence from words array
 function concat(words){
 	for(i=0;i<words.length-1;i++)
 	{
@@ -83,6 +87,7 @@ function concat(words){
 	return sentence;
 }
 
+//Display all function
 function displayall(response){
 	console.log(response.results[0]["result"]["tag"]["classes"]);
 }
@@ -93,12 +98,14 @@ Clarifai.initialize({
 });
 
 Clarifai.getTagsByUrl(
-  'http://www.creativeboom.com/uploads/articles/23/23148daab9620ec0fcbfb96893653a1335525fcc_860.jpg'
+	//Image URL
+  'https://scontent.xx.fbcdn.net/v/t34.0-0/p206x206/14081328_10209729945946523_2020620020_n.jpg?_nc_ad=z-m&oh=9a0d28d6829552d25f05bbde81e1609d&oe=57BA1291'
 ).then(
    function(response) {
-    search(response);
+    filter(response); //Select responses from API
+    //Get sentence here
     console.log(concat(words));
-    //displayall(response);
+    //displayall(response); //Display all responses from the API
   },
   function(err){
     console.log(err);
