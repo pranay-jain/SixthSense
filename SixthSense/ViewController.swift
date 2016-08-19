@@ -8,11 +8,12 @@
 
 import UIKit
 import AVFoundation
+import DKCamera
 
 class ViewController: UIViewController {
+
     
-    let captureSession = AVCaptureSession()
-    var captureDevice : AVCaptureDevice?
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,28 +32,18 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(swipeRight)
         
         singleTapRecognizer.requireGestureRecognizerToFail(doubleTapRecognizer)
-        
-        
-        captureSession.sessionPreset = AVCaptureSessionPresetLow
-        
-        let devices = AVCaptureDevice.devices()
-        
-        // Loop through all the capture devices on this phone
-        for device in devices {
-            // Make sure this particular device supports video
-            if (device.hasMediaType(AVMediaTypeVideo)) {
-                // Finally check the position and confirm we've got the back camera
-                if(device.position == AVCaptureDevicePosition.Back) {
-                    captureDevice = device as? AVCaptureDevice
-                }
-            }
-        }
-        
+
     }
     
     func handleSingleTap() {
         print("Single")
-        let cameraManager =
+        let camera = DKCamera()
+        camera.didFinishCapturingImage = {(image: UIImage) in
+            self.imageView.image = image
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        self.presentViewController(camera, animated: true, completion: nil)
     }
     
     func handleSwipeRight() {
