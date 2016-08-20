@@ -9,7 +9,6 @@
 import UIKit
 import AVFoundation
 import DKCamera
-import AlamofireImage
 import Alamofire
 
 class ViewController: UIViewController {
@@ -47,17 +46,44 @@ class ViewController: UIViewController {
         }
         
         camera.didFinishCapturingImage = {(image: UIImage) in
-            sendRequest(image)
-            self.imageView.image = image
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)) {
+                self.sendRequest(image)
+                dispatch_async(dispatch_get_main_queue()) {
+                    //self.imageView.image = image
+                    //self.dismissViewControllerAnimated(true, completion: nil)
+                    
+                }
+            }
             
-            self.dismissViewControllerAnimated(true, completion: nil)
+            
         }
         self.presentViewController(camera, animated: true, completion: nil)
     }
     
     func sendRequest(image: UIImage) {
         let urlPath = ""
-        //Alamofire.upload(.POST, urlPath, )
+        let urlGetPath = ""
+        let imageData = UIImagePNGRepresentation(image)
+        let base64String = imageData!.base64EncodedStringWithOptions((NSDataBase64EncodingOptions(rawValue: 0)))
+        
+        print("Yo")
+        
+        Alamofire.request(.POST, urlPath, parameters: ["image": base64String])
+        Alamofire.request(.GET, urlGetPath)
+            .responseString { response in
+                if response.result.isSuccess {
+                    self.produceSpeech(response.result.value!)
+                }
+        }
+
+    }
+    
+    func produceSpeech(text: String) {
+        let synth = AVSpeechSynthesizer()
+        var myUtterance = AVSpeechUtterance(string: "")
+        myUtterance = AVSpeechUtterance(string: text)
+        myUtterance.rate = 0.5
+        synth.speakUtterance(myUtterance)
     }
     
     func handleSwipeRight() {
