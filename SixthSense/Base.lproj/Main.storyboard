@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,23 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Onscreen To Open Camera" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="vN1-Et-GUq">
-                                <rect key="frame" x="59" y="280" width="482" height="39"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Onscreen To Scan Nearby Objects" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="vN1-Et-GUq">
+                                <rect key="frame" x="47.5" y="283.5" width="505.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
                                 </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double Tap for Navigation Assistance" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="oEK-c4-bC1">
+                                <rect key="frame" x="20" y="324" width="560" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vN1-Et-GUq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F01-dx-3KQ"/>
                             <constraint firstItem="vN1-Et-GUq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F3b-AK-umq"/>
+                            <constraint firstItem="oEK-c4-bC1" firstAttribute="top" secondItem="vN1-Et-GUq" secondAttribute="bottom" constant="8" symbolic="YES" id="Twk-09-dUV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oEK-c4-bC1" secondAttribute="trailing" id="ekO-bH-FFb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oEK-c4-bC1" secondAttribute="bottom" constant="208" id="pwC-D1-xOk"/>
+                            <constraint firstItem="oEK-c4-bC1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tgp-G5-Rtt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="subText" destination="oEK-c4-bC1" id="Iw3-yF-4KU"/>
                         <outlet property="text" destination="vN1-Et-GUq" id="jFL-Tt-HB5"/>
                     </connections>
                 </viewController>

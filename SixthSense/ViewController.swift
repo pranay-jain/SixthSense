@@ -8,12 +8,14 @@
 
 import UIKit
 import AVFoundation
+import Foundation
 import DKCamera
 import Alamofire
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var text: UILabel!
+    @IBOutlet weak var subText: UILabel!
     let synth = AVSpeechSynthesizer()
     var myUtterance = AVSpeechUtterance(string: "")
     
@@ -21,7 +23,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.produceSpeech(text.text!)
-        
+        self.produceSpeech(subText.text!)
+
         let singleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleSingleTap))
         singleTapRecognizer.numberOfTapsRequired = 1
         view.addGestureRecognizer(singleTapRecognizer)
@@ -41,6 +44,11 @@ class ViewController: UIViewController {
     
     func handleSingleTap() {
         print("Single")
+        //showCamera()
+        sendRequest(UIImage())
+    }
+    
+    func showCamera() {
         let camera = DKCamera()
         camera.didCancel = { () in
             print("didCancel")
@@ -61,15 +69,34 @@ class ViewController: UIViewController {
             
         }
         self.presentViewController(camera, animated: true, completion: nil)
+
     }
     
     func sendRequest(image: UIImage) {
         let urlPath = "http://172.20.10.8:3000/echo"
-        let imageData = UIImageJPEGRepresentation(image, 0.3)
-        let base64String = imageData!.base64EncodedStringWithOptions((NSDataBase64EncodingOptions(rawValue: 0)))
+//        let imageData = UIImageJPEGRepresentation(image, 0.2)
+//        let base64String = imageData!.base64EncodedStringWithOptions((NSDataBase64EncodingOptions(rawValue: 0)))
         
-        Alamofire.request(.POST, urlPath, parameters: ["image": base64String])
+//        faceDetection(imageData)
+//       
+//        Alamofire.upload(.POST, urlPath, multipartFormData: { multipartFormData in
+//            multipartFormData.appendBodyPart(data:imageData!, name: "photo")
+//            },
+//            encodingCompletion: { encodingResult in
+//                switch encodingResult {
+//                case .Success(let upload, _, _):
+//                    upload.responseJSON { response in
+//                        print(response.result.value)
+//                    }
+//                case .Failure(let encodingError):
+//                    print(encodingError)
+//                    
+//                }
+//            }
+//        )
         
+//      Alamofire.request(.POST, urlPath, parameters: ["image": base64String])
+
         Alamofire.request(.GET, urlPath)
             .responseString { response in
                 if response.result.isSuccess {
@@ -88,10 +115,23 @@ class ViewController: UIViewController {
     
     func handleSwipeRight() {
         print("swiped")
+        
+
     }
     
     func handleDoubleTap() {
         print("Double")
+        
+
+    }
+    
+    func sshConnect(args: String...) {
+
+    }
+
+    
+    func faceDetection(data:NSData?) {
+    
     }
     
 }
