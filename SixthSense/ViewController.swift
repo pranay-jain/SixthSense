@@ -11,6 +11,7 @@ import AVFoundation
 import Foundation
 import DKCamera
 import Alamofire
+import AudioToolbox
 
 class ViewController: UIViewController {
 
@@ -94,7 +95,6 @@ class ViewController: UIViewController {
 //                }
 //            }
 //        )
-        
 //      Alamofire.request(.POST, urlPath, parameters: ["image": base64String])
 
         Alamofire.request(.GET, urlPath)
@@ -104,7 +104,6 @@ class ViewController: UIViewController {
                     self.produceSpeech(response.result.value!)
                 }
         }
-
     }
     
     func produceSpeech(text: String) {
@@ -121,7 +120,19 @@ class ViewController: UIViewController {
     
     func handleDoubleTap() {
         print("Double")
-        
+        let path = "http://172.20.10.8:3000/hi"
+        Alamofire.request(.GET, path)
+            .responseString() { response in
+                print(response.result.value)
+                if let val = response.result.value  {
+                    if val == "key=True" {
+                        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                        self.produceSpeech("Warning! You have an obstacle ahead")
+                    }
+                } else {
+                    print("You're good")
+                }
+        }
 
     }
     
