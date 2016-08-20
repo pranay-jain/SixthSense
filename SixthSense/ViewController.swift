@@ -61,14 +61,31 @@ class ViewController: UIViewController {
     }
     
     func sendRequest(image: UIImage) {
-        let urlPath = ""
-        let urlGetPath = "http://172.20.10.8:3000/echo"
-        let imageData = UIImagePNGRepresentation(image)
+        let urlPath = "http://172.20.10.8:3000/echo"
+        let imageData = UIImageJPEGRepresentation(image, 0.3)
         let base64String = imageData!.base64EncodedStringWithOptions((NSDataBase64EncodingOptions(rawValue: 0)))
         
-        
         Alamofire.request(.POST, urlPath, parameters: ["image": base64String])
-        Alamofire.request(.GET, urlGetPath)
+        
+//        Alamofire.upload(.POST, urlPath, multipartFormData: {
+//            multipartFormData in
+//            if let _image = self.profilePic.image {
+//                if let imageData = UIImagePNGRepresentation(_image) {
+//                    multipartFormData.appendBodyPart(data: imageData, name: "user_image", fileName: "file.png", mimeType: "image/png")
+//                }
+//            }, encodingCompletion: { encodingResult in
+//                switch encodingResult {
+//                case .Success(let upload, _, _):
+//                    upload.responseJSON { response in
+//                        debugPrint(response)
+//                    }
+//                case .Failure(let encodingError):
+//                    print(encodingError)
+//                }
+//            }
+//        )
+        
+        Alamofire.request(.GET, urlPath)
             .responseString { response in
                 if response.result.isSuccess {
                     print(response.result.value!)
