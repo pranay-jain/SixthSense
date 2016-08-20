@@ -31,7 +31,7 @@ pulse_duration = pulse_end - pulse_start #Get pulse duration to a variable
 distance = pulse_duration * 17150        #Multiply pulse duration by 17150 to get distance
 distance = round(distance, 2)            #Round to two decimal points
 
-if distance > 2 and distance < 400:      #Check whether the distance is within range
-  return distance - 0.5  #Print distance with 0.5 cm calibration
+if distance<200:
+  return True
 else:
-  return -1                  #display out of range
+  return False
