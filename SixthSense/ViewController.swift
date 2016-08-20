@@ -62,16 +62,16 @@ class ViewController: UIViewController {
     
     func sendRequest(image: UIImage) {
         let urlPath = ""
-        let urlGetPath = ""
+        let urlGetPath = "http://172.20.10.8:3000/echo"
         let imageData = UIImagePNGRepresentation(image)
         let base64String = imageData!.base64EncodedStringWithOptions((NSDataBase64EncodingOptions(rawValue: 0)))
         
-        print("Yo")
         
         Alamofire.request(.POST, urlPath, parameters: ["image": base64String])
         Alamofire.request(.GET, urlGetPath)
             .responseString { response in
                 if response.result.isSuccess {
+                    print(response.result.value!)
                     self.produceSpeech(response.result.value!)
                 }
         }
