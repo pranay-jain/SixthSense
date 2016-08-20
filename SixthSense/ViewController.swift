@@ -13,11 +13,14 @@ import Alamofire
 
 class ViewController: UIViewController {
 
-    
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var text: UILabel!
+    let synth = AVSpeechSynthesizer()
+    var myUtterance = AVSpeechUtterance(string: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.produceSpeech(text.text!)
         
         let singleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleSingleTap))
         singleTapRecognizer.numberOfTapsRequired = 1
@@ -67,24 +70,6 @@ class ViewController: UIViewController {
         
         Alamofire.request(.POST, urlPath, parameters: ["image": base64String])
         
-//        Alamofire.upload(.POST, urlPath, multipartFormData: {
-//            multipartFormData in
-//            if let _image = self.profilePic.image {
-//                if let imageData = UIImagePNGRepresentation(_image) {
-//                    multipartFormData.appendBodyPart(data: imageData, name: "user_image", fileName: "file.png", mimeType: "image/png")
-//                }
-//            }, encodingCompletion: { encodingResult in
-//                switch encodingResult {
-//                case .Success(let upload, _, _):
-//                    upload.responseJSON { response in
-//                        debugPrint(response)
-//                    }
-//                case .Failure(let encodingError):
-//                    print(encodingError)
-//                }
-//            }
-//        )
-        
         Alamofire.request(.GET, urlPath)
             .responseString { response in
                 if response.result.isSuccess {
@@ -96,8 +81,6 @@ class ViewController: UIViewController {
     }
     
     func produceSpeech(text: String) {
-        let synth = AVSpeechSynthesizer()
-        var myUtterance = AVSpeechUtterance(string: "")
         myUtterance = AVSpeechUtterance(string: text)
         myUtterance.rate = 0.5
         synth.speakUtterance(myUtterance)
