@@ -1,0 +1,10 @@
+#Cocoapods 
+Pods
+
+# Node.js
+npm-debug.log*
+node_modules
+
+
+# Mac OS X
+.DS_Store
