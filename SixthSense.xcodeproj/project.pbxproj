@@ -18,7 +18,6 @@
 		9BFCA3411D677D3A006D6506 /* SixthSenseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCA3401D677D3A006D6506 /* SixthSenseUITests.swift */; };
 		9BFCA3501D678B70006D6506 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCA34F1D678B70006D6506 /* SpeechRecognizer.swift */; };
 		9BFCA3551D678D65006D6506 /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BFCA3521D678D65006D6506 /* AcousticModelEnglish.bundle */; };
-		9BFCA3561D678D65006D6506 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA3531D678D65006D6506 /* OpenEars.framework */; };
 		9BFCA3571D678D65006D6506 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFCA3541D678D65006D6506 /* Slt.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		9BFCA3421D677D3A006D6506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BFCA34F1D678B70006D6506 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		9BFCA3521D678D65006D6506 /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
-		9BFCA3531D678D65006D6506 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
 		9BFCA3541D678D65006D6506 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
 		EF4AA28FF08C9084BF8F163E /* Pods_SixthSenseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SixthSenseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE89F85D140A693711DAB7C /* Pods_SixthSenseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SixthSenseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +69,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFCA3571D678D65006D6506 /* Slt.framework in Frameworks */,
-				9BFCA3561D678D65006D6506 /* OpenEars.framework in Frameworks */,
 				99FE7E92B65ECA29888B2793 /* Pods_SixthSense.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				9BFCA3521D678D65006D6506 /* AcousticModelEnglish.bundle */,
-				9BFCA3531D678D65006D6506 /* OpenEars.framework */,
 				9BFCA3541D678D65006D6506 /* Slt.framework */,
 			);
 			path = Framework;

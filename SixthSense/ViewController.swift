@@ -17,6 +17,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var text: UILabel!
     @IBOutlet weak var subText: UILabel!
+    var flag: Int = 0
+    
     let synth = AVSpeechSynthesizer()
     var myUtterance = AVSpeechUtterance(string: "")
     
@@ -45,8 +47,7 @@ class ViewController: UIViewController {
     
     func handleSingleTap() {
         print("Single")
-        //showCamera()
-        sendRequest(UIImage())
+        showCamera()
     }
     
     func showCamera() {
@@ -70,6 +71,7 @@ class ViewController: UIViewController {
             
         }
         self.presentViewController(camera, animated: true, completion: nil)
+        sendRequest(UIImage())
 
     }
     
@@ -114,12 +116,24 @@ class ViewController: UIViewController {
     
     func handleSwipeRight() {
         print("swiped")
-        
+        // TODO: Manage swipe function
 
     }
     
     func handleDoubleTap() {
         print("Double")
+        flag += 1
+        let timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.sayHello), userInfo: nil, repeats: true)
+        if (flag%2 == 0) {
+            timer.invalidate()
+            flag = 0
+        }
+        
+
+    }
+    
+    func sayHello()
+    {
         let path = "http://172.20.10.8:3000/hi"
         Alamofire.request(.GET, path)
             .responseString() { response in
@@ -133,16 +147,11 @@ class ViewController: UIViewController {
                     print("You're good")
                 }
         }
-
-    }
-    
-    func sshConnect(args: String...) {
-
     }
 
     
     func faceDetection(data:NSData?) {
-    
+        
     }
     
 }
