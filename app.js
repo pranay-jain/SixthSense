@@ -4,8 +4,8 @@
 var Clarifai = require('clarifai');
 var http = require("http");
 var url = require('url');
-
-var s;
+var hi = "";
+var s,a;
 
 var keywords = ['laptop',
 				'computer',
@@ -62,6 +62,7 @@ var klen = keywords.length;
 
 //Filter response by keywords
 function filter(response){
+	words = [];
 	var len = response.results[0]["result"]["tag"]["classes"].length;
     for(i=0;i<len;i++)
     {
@@ -83,6 +84,7 @@ function filter(response){
 
 //Create a sentence from words array
 function concat(words){
+	sentence = "Objects around you are : ";
 	for(i=0;i<words.length-1;i++)
 	{
 		sentence = sentence + words[i] + ", ";
@@ -104,13 +106,14 @@ Clarifai.initialize({
 
 Clarifai.getTagsByUrl(
 	//Image URL
-  'https://scontent.fdel1-1.fna.fbcdn.net/v/t35.0-12/14044899_1087745107986760_1250302854_o.jpg?oh=2ce31d85c32f147043d0412a1f0b8dba&oe=57B90294'
+  'http://abhinavthukral.in/c.jpg'
 ).then(
    function(response) {
     filter(response); //Select responses from API
     //Get sentence here
   	s = concat(words);
-    //displayall(response); //Display all responses from the API
+  	console.log(s);
+    displayall(response); //Display all responses from the API
   },
   function(err){
     console.log(err);
@@ -118,29 +121,60 @@ Clarifai.getTagsByUrl(
 );
 
 http.createServer(function(req, res) {
+	if (req.method === 'POST' && req.url === '/hi') {
+    var body = [];
+    req.on('data', function(chunk) {
+      body.push(chunk);
+    }).on('end', function() {
+      body = Buffer.concat(body).toString();
+      hi = body;
+      if(hi=="key=True")
+      	a=1;
+      else if(hi=="key=False")
+      	a=0;
+      else
+      	a=-1;
+      console.log(hi);
+     })
+  }
+
+  if (req.method === 'GET' && req.url === '/hi') {
+    res.end(hi);
+    console.log("Sent "+hi);
+  }
+
   if (req.method === 'POST' && req.url === '/echo') {
     var body = [];
     req.on('data', function(chunk) {
       body.push(chunk);
     }).on('end', function() {
       body = Buffer.concat(body).toString();
-      var sub = body.substring(5,body.length-1);
-      Clarifai.getTagsByImageBytes(sub).then(
-   				function(response) {
-    			filter(response);
-  				s = concat(words);
-  				console.log(s);
-  			},
-  			function(err){
-    			console.log(err);
-  			}
-		);
-    })
+      var sub = body.substring(6,body.length);
+    //console.log(sub);
+
+     })
   } else if (req.method === 'GET' && req.url === '/echo') {
+
+  	Clarifai.getTagsByUrl(
+	//Image URL
+  'http://cdn.grid.fotosearch.com/CSP/CSP992/k13525739.jpg'
+).then(
+   function(response) {
+    filter(response); //Select responses from API
+    //Get sentence here
+  	s = concat(words);
+  	console.log(s);
+    //displayall(response); //Display all responses from the API
+  },
+  function(err){
+    console.log(err);
+  }
+);
+
     res.end(s);
   } else {
-    response.statusCode = 404;
-    response.end();
+    res.statusCode = 404;
+    res.end();
   }
 
 }).listen(3000,"0.0.0.0");
